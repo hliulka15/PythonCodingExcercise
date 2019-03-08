@@ -14,6 +14,7 @@ class NavigationTest(unittest.TestCase):
         self.nav = Navigation(self.driver)
         self.base = BasePage(self.driver)
 
+    # test corresponds with Test Case ID 1
     def test_art_link_filters_art_opinions(self):
 
         self.nav.select_arts_side_nav()
@@ -21,7 +22,8 @@ class NavigationTest(unittest.TestCase):
         print(actual_title)
         assert "Arts Opinions" in actual_title
 
-    def test_entertainment_link_filters_art_opinions(self):
+    # test corresponds with Test Case ID 2
+    def test_entertainment_link_filters_entertainment_opinions(self):
 
         self.nav.select_entertainment_side_nav()
         actual_title = self.base.get_page_header()
