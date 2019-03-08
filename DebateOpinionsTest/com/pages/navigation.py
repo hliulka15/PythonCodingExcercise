@@ -1,4 +1,4 @@
-from com.locators.locators import Locators
+from DebateOpinionsTest.com.locators.locators import Locators
 
 class Navigation:
 

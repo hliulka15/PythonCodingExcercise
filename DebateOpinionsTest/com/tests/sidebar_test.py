@@ -1,7 +1,7 @@
 from selenium import webdriver
 import unittest
-from com.pages.navigation import Navigation
-from com.pages.base_page import BasePage
+from DebateOpinionsTest.com.pages.navigation import Navigation
+from DebateOpinionsTest.com.pages.base_page import BasePage
 
 
 class NavigationTest(unittest.TestCase):

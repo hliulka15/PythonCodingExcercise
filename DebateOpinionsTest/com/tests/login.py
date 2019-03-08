@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 import unittest
-from com.pages.login import Login
+from DebateOpinionsTest.com.pages.login import Login
 
 
 class LoginTest(unittest.TestCase):
@@ -20,9 +20,11 @@ class LoginTest(unittest.TestCase):
 
         # login ended up not working because of the captcha. So Instead,
         # verified captcha cannot be clicked and logging in would fail.
-        # I ended up being very limited in test case options because of this
+        # originally this was intended to be in the login page. However, since
+        # it was destined to fail I decided to turn it into a bonus test case
 
-        try: self.driver.find_element_by_id("recaptcha-anchor").click()
+        try:
+            self.driver.find_element_by_id("recaptcha-anchor").click()
         except NoSuchElementException: print("cannot use captcha")
 
         self.login.click_sign_in_button()
