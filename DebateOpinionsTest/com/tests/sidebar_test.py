@@ -15,6 +15,7 @@ class NavigationTest(unittest.TestCase):
         self.base = BasePage(self.driver)
 
     # test corresponds with Test Case ID 1
+    # verify page header changes when a new category is selected
     def test_art_link_filters_art_opinions(self):
 
         self.nav.select_arts_side_nav()
@@ -23,6 +24,7 @@ class NavigationTest(unittest.TestCase):
         assert "Arts Opinions" in actual_title
 
     # test corresponds with Test Case ID 2
+    # verify page header changes when a new category is selected
     def test_entertainment_link_filters_entertainment_opinions(self):
 
         self.nav.select_entertainment_side_nav()
